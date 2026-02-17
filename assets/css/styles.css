@@ -1,0 +1,222 @@
+/* BharatSkills Foundation Website Styles */
+:root {
+  --primary: #0f172a;
+  --accent: #f97316;
+  --light-bg: #f8fafc;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.bg-soft {
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #ea580c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
+
+.nav-link {
+  color: #e2e8f0 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+.hero {
+  min-height: 90vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)),
+    url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.card-icon {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(249, 115, 22, 0.12);
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.tech-badge {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.counter {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.testimonial-slide {
+  display: none;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+.flow-step {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+footer {
+  background: var(--primary);
+  color: #e2e8f0;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.dark-mode .bg-soft,
+body.dark-mode section.bg-light {
+  background: #111827 !important;
+}
+
+body.dark-mode .glass-card,
+body.dark-mode .flow-step,
+body.dark-mode .tech-badge,
+body.dark-mode .card {
+  background: rgba(17, 24, 39, 0.85);
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+body.dark-mode .navbar {
+  background: rgba(2, 6, 23, 0.98) !important;
+}
+
+body.dark-mode footer {
+  background: #020617;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    min-height: 80vh;
+  }
+}
